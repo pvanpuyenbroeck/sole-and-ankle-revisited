@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
-import { COLORS } from '../../constants';
+import {QUERIES } from '../../constants';
 
 import SearchInput from '../SearchInput';
 import UnstyledButton from '../UnstyledButton';
@@ -23,19 +23,23 @@ const SuperHeader = () => {
 };
 
 const Wrapper = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  font-size: 0.875rem;
-  color: ${COLORS.gray[300]};
-  background-color: ${COLORS.gray[900]};
-  height: 40px;
-  padding-left: 32px;
-  padding-right: 32px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    font-size: 0.875rem;
+    color: var(--gray300);
+    background-color: var(--gray900);
+    height: 40px;
+    padding-left: 32px;
+    padding-right: 32px;
+
+    @media ${QUERIES.tabletAndUp} {
+        margin-top: -36px;
+    }
 `;
 
 const MarketingMessage = styled.span`
-  color: ${COLORS.white};
+  color: var(--white);
   margin-right: auto;
 `;
 
